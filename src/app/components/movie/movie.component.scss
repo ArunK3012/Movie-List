@@ -1,0 +1,97 @@
+.movie-container {
+  background-color: white;
+  margin-top: 5%;
+  margin-left: 3%;
+
+  .input-form {
+    font-size: 15px;
+    color: black;
+    border-style: groove;
+    font-weight: bold;
+    padding-bottom: 2%;
+    padding-left: 1%;
+
+    h3 {
+      position: relative;
+      padding-bottom: 0%;
+      margin-bottom: -2.5%;
+
+    }
+
+    input {
+      width: 40px;
+      margin: 1%;
+    }
+
+    .newMovie {
+      display: block;
+      width: 18%;
+      position: relative;
+      left: 5%;
+    }
+
+    button {
+      width: 64px;
+      margin-top: 12px;
+      position: relative;
+      left: 9%;
+    }
+
+    .radio-btn {
+      margin-top: 10px;
+
+      li {
+        display: block;
+        padding: 0px;
+        margin-top: 30px;
+      }
+    }
+  }
+
+  .movie {
+    margin-left: 1%;
+    display: inline-block;
+    margin-top: 1%;
+    font-size: 14px;
+
+    a {
+
+      .image {
+
+        height: 162px;
+        display: block;
+        transition: 0.3s ease-in all;
+
+        &:hover {
+          transform: scale(1.2);
+          
+        }
+      }
+
+      .poster {
+        position: absolute;
+        top: 68%;
+        color: black;
+        opacity: 0;
+        font-weight: bold;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+        .title {
+          margin-top: 0%;
+        }
+
+        .year {
+          margin-top: -22%;
+        }
+
+        .rating {
+          margin-top: -21%;
+        }
+      }
+    }
+
+    a:hover .poster {
+      opacity: 1;
+    }
+  }
+}

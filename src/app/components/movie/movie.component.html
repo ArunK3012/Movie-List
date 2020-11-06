@@ -1,0 +1,36 @@
+<div class="movie-container">
+  <div class="input-form">
+    <h3>TITLE: </h3>
+    <input class="newMovie" [(ngModel)]="movie.title" placeholder="title" text="title">
+    <h3>YEAR:</h3>
+    <input class="newMovie" [(ngModel)]="movie.year" placeholder="year" text="year">
+    <h3>IMAGE:</h3>
+    <input class="newMovie" [(ngModel)]="movie.imageUrl" placeholder="imageUrl" text="imageUrl">
+    <div class="radio-btn">
+      <h3>RATINGS:</h3>
+      <li>
+        <input type="radio" name="1" id="1" [(ngModel)]="movie.rating" value="1">
+        <label for="1">1</label>
+        <input type="radio" name="1" id="2" [(ngModel)]="movie.rating" value="2">
+        <label for="2">2</label>
+        <input type="radio" name="1" id="3" [(ngModel)]="movie.rating" value="3">
+        <label for="3">3</label>
+        <input type="radio" name="1" id="4" [(ngModel)]="movie.rating" value="4">
+        <label for="4">4</label>
+        <input type="radio" name="1" id="5" [(ngModel)]="movie.rating" value="5">
+        <label for="5">5</label>
+      </li>
+    </div>
+    <button class="btn btn-primary" (click)="save()">ADD</button>
+  </div>
+  <div class="movie" *ngFor="let movie of movieList">
+    <a routerLink="/movie/{{movie.id}}">
+      <img class="image" [src]="movie.imageUrl" alt="">
+      <div class="poster">
+        <p class="title">{{movie.title}}</p>
+        <p class="year">{{movie.year}}</p>
+        <p class="rating">{{movie.rating}}</p>
+      </div>
+    </a>
+  </div>
+</div>
