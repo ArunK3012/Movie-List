@@ -64,17 +64,20 @@
 
         &:hover {
           transform: scale(1.2);
-          
+          transition: 3ms ease-in;
+          z-index: 1;
+          filter: blur(2px);
         }
       }
 
       .poster {
         position: absolute;
-        top: 68%;
+        top: 63%;
+        text-align: center;
         color: black;
-        opacity: 0;
         font-weight: bold;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+        opacity: 0;
 
         .title {
           margin-top: 0%;
