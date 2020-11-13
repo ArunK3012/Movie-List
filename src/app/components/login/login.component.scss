@@ -1,0 +1,39 @@
+.container {
+
+  background-color: brown;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: lighter;
+
+  .credentials {
+    background-color: cadetblue;
+    display: inline-block;
+    width: 30%;
+    height: 308px;
+    position: absolute;
+    left: 34%;
+    top: 28%;
+
+    h3 {
+      position: relative;
+      left: 28%;
+    }
+
+    input {
+        position: relative;
+        left: 28%;
+        border-style: solid;
+        border-radius: 7px;
+        top: -4%;
+        height: 20px;
+    }
+
+    .btn-success {
+        position: relative;
+        left: -8%;
+        top: 11%;
+        border-radius: 10px;
+        width: 33%;
+        height: 30px;
+    }
+  }
+}

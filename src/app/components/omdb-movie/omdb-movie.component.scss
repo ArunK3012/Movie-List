@@ -1,0 +1,106 @@
+.film {
+  margin: 2% 0 0 2%;
+  flex-direction: column;
+  align-items: center;
+  display: inline-flex;
+  width: 158px;
+  background-color: #e62429;
+
+  .view {
+    width: 100%;
+    height: 170px;
+    overflow: hidden;
+
+    .img-fluid {
+      width: 100%;
+      height: 170px;
+      display: block;
+      transition: 0.5s linear;
+      border-bottom: 2px solid red;
+    }
+  }
+
+
+  .filmList {
+
+    font-weight: 400;
+    font-family: "trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    background-color: #151515;
+    color: white;
+    width: 100%;
+    height: 110px;
+    position: relative;
+
+    p {
+      margin-bottom: 0%;
+      z-index: 2;
+      position: relative;
+    }
+
+    .slide {
+      background: red;
+      height: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      transition: 0.3s ease;
+    }
+
+
+    .navbar {
+      display: inline-block;
+      padding: 0%;
+      position: relative;
+      top: 35%;
+      left: 28%;
+
+      .btn-danger {
+        width: 57%;
+        height: 35px;
+        position: relative;
+        top: -33%;
+      }
+    }
+
+    &:after {
+      content: "";
+    height: 0;
+    width: 0;
+    color: black;
+    border-style: solid;
+    border-width: 10px;
+    border-color: #00800000 white white #80008000;
+    position: absolute;
+    top: 82.6%;
+    left: 89.3%;
+    }
+  }
+
+  &:hover {
+    .view {
+      .img-fluid {
+        transform: scale(1.1);
+      }
+    }
+
+    .filmList {
+      .slide {
+        height: 100%;
+      }
+    }
+  }
+
+
+}
+
+
+
+.page {
+  display: flexbox;
+  padding-top: 2rem;
+
+  button {
+    margin-right: 3px;
+  }
+}

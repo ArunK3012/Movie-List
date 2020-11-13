@@ -8,3 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'My-film';
 }
+
+//  omdb APIkey
+// http:www.omdbapi.com/?i=tt3896198&apikey=7dee3a19
+

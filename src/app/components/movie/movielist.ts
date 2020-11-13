@@ -1,4 +1,4 @@
-import { Movie } from './moviemodule';
+import { Movie } from '../interface/moviemodule';
 
 export const MOVIE: Movie[] = [
     {

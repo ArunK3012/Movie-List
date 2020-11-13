@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="film" *ngFor="let omdb of omdbMovieList">
+    <div class="link" routerLink="/omdb/{{omdb.imdbID}}">
+      <div class="view overlay zoom">
+        <img [src]="omdb.Poster" class="img-fluid ">
+      </div>
+        <div class="filmList">
+          <p>{{omdb.Title | slice:0:17 }}</p>
+          <div class="slide"></div>
+          <div class="navbar">
+            <button class="btn btn-primary" (click)="saveToWishList($event, omdb)">ADD</button>
+          </div>
+        </div>
+    </div>
+  </div>
+  <div class="page">
+    <button [disabled]="pageNo == 1" class="btn btn-secondary" (click)="paginate(-1)">Previous</button>
+    <button *ngIf="pageNo < 100" class="btn btn-secondary" (click)="paginate(1)">Next</button>
+  </div>
+</div>

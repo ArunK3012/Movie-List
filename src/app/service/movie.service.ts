@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import { MOVIE } from '../components/movie/movielist';
-import { Movie } from '../components/movie/moviemodule';
+import { Movie } from '../components/interface/moviemodule';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MovieService {
 
+  
   constructor() { }
 
   getMovies(): Movie[] {

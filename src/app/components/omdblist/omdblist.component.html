@@ -1,0 +1,9 @@
+<div class="movie">
+  <img class="image" [src]="omdbList.Poster" alt="">
+  <p class="title">TITLE: {{omdbList.Title}}</p>
+  <p class="year">YEAR: {{omdbList.Year}}</p>
+  <p class="Type">TYPE: {{omdbList.Type}}</p>
+  <p class="Plot">PLOT: {{omdbList.Plot}}</p>
+  <p class="Actors">ACTORS: {{omdbList.Actors}}</p>
+  <button class="btn btn-primary" (click)="saveToWishList(omdbList)">ADD</button>
+</div>

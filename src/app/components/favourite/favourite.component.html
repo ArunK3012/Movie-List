@@ -1,0 +1,11 @@
+<div class="film" *ngFor="let omdb of omdbList">
+  <div class="link" routerLink="/omdb/{{omdb.imdbID}}">
+    <div class="view overlay zoom">
+      <img [src]="omdb.Poster" class="img-fluid" alt="">
+    </div>
+    <p class="title">{{omdb.Title  | slice:0:13}}</p>
+    <p class="year">Year:{{omdb.Year}}</p>
+    <p class="type">Type:{{omdb.Type}}</p>
+  </div>
+  <button class="btn btn-danger" (click)="clearFavourite($event, omdb)">REMOVE</button>
+</div>

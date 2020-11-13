@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Movie } from './moviemodule';
+import { Movie } from '../interface/moviemodule';
 import { MovieService } from 'src/app/service/movie.service';
 
 @Component({
@@ -21,21 +21,20 @@ export class MovieComponent implements OnInit {
 
   movieList: Movie[];
 
-
   constructor(private movieservice: MovieService) { }
 
   ngOnInit(): void {
-    this.getMovies();
+    this.loadMovies();
   }
 
-  getMovies(): void {
+  loadMovies(): void {
     this.movieList = this.movieservice.getMovies();
   }
 
   save(): void {
     this.movie.id = this.randomString();
     const tempfilm: Movie = { ...this.movie };
-    this.movieList.push(tempfilm);
+    this.movieList.unshift(tempfilm);
   }
 
   randomString(): string {
